@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'my-app';
-  isChild = false
 
   constructor() {
     console.log("App constructor dipanggil");
@@ -18,7 +17,4 @@ export class AppComponent implements OnInit {
     console.log("App ngOnInit dipanggil");
   }
 
-  toggleChild(){
-    this.isChild = !this.isChild
-  }
 }
