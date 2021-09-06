@@ -7,6 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListUserComponent implements OnInit {
 
+  users = [
+    {
+      id: "01",
+      firstName: "Edi",
+      lastName: "Murwanto",
+      job: "-",
+      avatar: "-"
+    },
+    {
+      id: "02",
+      firstName: "Jhon",
+      lastName: "Tor",
+      job: "-",
+      avatar: "-"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

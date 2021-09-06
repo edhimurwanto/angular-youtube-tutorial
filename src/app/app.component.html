@@ -1,1 +1,19 @@
-<app-pages></app-pages>
+<!-- <app-pages></app-pages> -->
+
+<div class="container">
+
+    <div [class]="contentClass">
+        <h1 [innerHTML]="title"></h1>
+        <p [innerHTML]="paragraf"></p>
+        <a [href]="dokumentasiLink">
+            <p>Dokumentasi data binding</p>
+        </a>
+
+        <button [disabled]="isClassSpecial" (click)="changeClassType('special')">Special</button>
+        <button [disabled]="!isClassSpecial" (click)="changeClassType('default')">Default</button>
+
+        <app-child [text]="data"></app-child>
+
+    </div>
+
+</div>
