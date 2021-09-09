@@ -2,18 +2,9 @@
 
 <div class="container">
 
-    <div [class]="contentClass">
-        <h1 [innerHTML]="title"></h1>
-        <p [innerHTML]="paragraf"></p>
-        <a [href]="dokumentasiLink">
-            <p>Dokumentasi data binding</p>
-        </a>
+    <button (click)="title='Welcome to Angular 11'">Greeting</button>
+    <button (click)="greeting()">Greeting</button>
 
-        <button [disabled]="isClassSpecial" (click)="changeClassType('special')">Special</button>
-        <button [disabled]="!isClassSpecial" (click)="changeClassType('default')">Default</button>
-
-        <app-child [text]="data"></app-child>
-
-    </div>
+    <h2>{{title}}</h2>
 
 </div>

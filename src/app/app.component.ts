@@ -7,24 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = "Tutorial Angular 11 | Property Binding"
-  paragraf = "Paragraf dari komponen class menggunakan property binding"
-  dokumentasiLink = "https://angular.io/guide/property-binding"
-  contentClass = "specialClass"
-  isClassSpecial = true
+  title = ''
 
-  data = 'Data dari parent komponen dirubah'
-
-  changeClassType(type) {
-    if (type === 'special') {
-      this.isClassSpecial = true
-      this.contentClass = 'specialClass'
-      this.title  = 'Special Class'
-    } else {
-      this.isClassSpecial = false
-      this.contentClass = 'defaultClass'
-      this.title  = 'Default Class'
-    }
+  greeting(){
+    this.title = 'Welcome to Tutorial Angular 11'
   }
 
   ngOnInit(): void {
