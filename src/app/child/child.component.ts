@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,7 +7,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() text = '';
+  @Input() counter! : number;
+  @Output() counterChange = new EventEmitter<number>();
+
+  increment(){
+    this.handleChangeCounter(this.counter + 1);
+  }
+
+  decrement(){
+    this.handleChangeCounter(this.counter - 1);
+  }
+
+  handleChangeCounter(value){
+    this.counterChange.emit(value);
+  }
 
   constructor() { }
 

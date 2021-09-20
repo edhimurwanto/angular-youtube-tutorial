@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = ''
+  counter = 0
 
   greeting(){
     this.title = 'Welcome to Tutorial Angular 11'

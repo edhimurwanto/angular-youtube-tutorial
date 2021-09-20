@@ -2,9 +2,11 @@
 
 <div class="container">
 
-    <button (click)="title='Welcome to Angular 11'">Greeting</button>
-    <button (click)="greeting()">Greeting</button>
+    <app-child [(counter)]="counter"></app-child>
 
+    <!-- <app-child [counter]="counter" (setCounter)="counter=$event"></app-child> -->
+
+    <input type="text" [(ngModel)]="title" />
     <h2>{{title}}</h2>
 
 </div>
