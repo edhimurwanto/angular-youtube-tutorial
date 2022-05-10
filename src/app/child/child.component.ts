@@ -10,6 +10,8 @@ export class ChildComponent implements OnInit {
   @Input() counter! : number;
   @Output() counterChange = new EventEmitter<number>();
 
+  isSpecial = false
+
   increment(){
     this.handleChangeCounter(this.counter + 1);
   }
