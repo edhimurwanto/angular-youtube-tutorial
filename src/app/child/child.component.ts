@@ -7,20 +7,27 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() counter! : number;
+  @Input() counter!: number;
   @Output() counterChange = new EventEmitter<number>();
 
-  isSpecial = false
+  isSpecial = true
 
-  increment(){
+  btnClasses = () => {
+    return {
+      btn: true,
+      "btn-primary": this.isSpecial
+    }
+  }
+
+  increment() {
     this.handleChangeCounter(this.counter + 1);
   }
 
-  decrement(){
+  decrement() {
     this.handleChangeCounter(this.counter - 1);
   }
 
-  handleChangeCounter(value){
+  handleChangeCounter(value) {
     this.counterChange.emit(value);
   }
 
