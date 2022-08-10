@@ -12,6 +12,27 @@ export class ChildComponent implements OnInit {
 
   isSpecial = true
 
+  products = [
+    {
+      id: 0,
+      name: 'Raket Lining Aeonaut',
+      price: 2000000,
+      stock: 10
+    },
+    {
+      id: 1,
+      name: 'Raket Lining Aeonaut  9000',
+      price: 5000000,
+      stock: 0
+    },
+    {
+      id: 2,
+      name: 'Tas Raket',
+      price: 200000,
+      stock: 10
+    }
+  ]
+
   btnClasses = () => {
     return {
       btn: true,

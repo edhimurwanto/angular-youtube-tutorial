@@ -2,12 +2,14 @@
 
     <h2>Child Component</h2>
 
-    <button [ngClass]="['btn', 'btn-primary']">ARRAY</button>
+    <div *ngFor="let product of products">
 
-    <button [ngClass]="'btn btn-primary'">STRING</button>
+        <div [ngStyle]="{ backgroundColor : product.stock > 0 ? 'green' : 'grey' }">
+            <p> Name : {{product.name}}</p>
+            <p> Stock : {{product.stock}}</p>
+            <button>Tambah Ke Keranjang</button> 
+        </div>
 
-    <button [ngClass]="{ btn: true, 'btn-primary': true }">OBJECT</button>
-
-    <button [ngClass]="btnClasses()">METHOD</button>
+    </div>
 
 </div>
