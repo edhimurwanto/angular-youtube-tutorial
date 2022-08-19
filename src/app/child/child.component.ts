@@ -17,19 +17,38 @@ export class ChildComponent implements OnInit {
       id: 0,
       name: 'Raket Lining Aeonaut',
       price: 2000000,
-      stock: 10
+      stock: 10,
+      discount: 0
     },
     {
       id: 1,
       name: 'Raket Lining Aeonaut  9000',
       price: 5000000,
       stock: 0
+      ,
+      discount: 10
     },
     {
       id: 2,
       name: 'Tas Raket',
       price: 200000,
-      stock: 10
+      stock: 10,
+      discount: 10
+    },
+    {
+      id: 3,
+      name: 'Raket Lining Aeonaut  9000',
+      price: 5000000,
+      stock: 0
+      ,
+      discount: 30
+    },
+    {
+      id: 4,
+      name: 'Tas Raket',
+      price: 200000,
+      stock: 10,
+      discount: 30
     }
   ]
 

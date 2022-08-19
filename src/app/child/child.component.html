@@ -2,14 +2,21 @@
 
     <h2>Child Component</h2>
 
-    <div *ngFor="let product of products">
-
-        <div [ngStyle]="{ backgroundColor : product.stock > 0 ? 'green' : 'grey' }">
-            <p> Name : {{product.name}}</p>
-            <p> Stock : {{product.stock}}</p>
-            <button>Tambah Ke Keranjang</button> 
+    <div *ngIf="products.length > 0; else elseBlock">
+        <div *ngFor="let item of products">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">Rp.{{item.price}}</p>
+            <div [ngSwitch]="item.discount">
+                <p *ngSwitchCase="30" class="card-text" style="color: 'green';">{{item.discount}}%</p>
+                <p *ngSwitchCase="10" class="card-text" style="color: 'red';">{{item.discount}}%</p>
+                <p *ngSwitchCase="0" class="card-text" style="color: 'grey';">{{item.discount}}%</p>
+            </div>
         </div>
-
     </div>
+
+    <ng-template #elseBlock>
+        Product is empty.
+    </ng-template>
+
 
 </div>
