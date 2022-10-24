@@ -1,1 +1,10 @@
-<app-pages></app-pages>
+<!-- <app-pages></app-pages> -->
+
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<p [appHighlight]="color">Highlight me!</p>
+<p [appHighlight]="color"  defaultColor="blue">Highlight me!</p>
