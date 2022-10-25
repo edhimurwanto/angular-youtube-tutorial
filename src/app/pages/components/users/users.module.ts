@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListUserComponent } from './components/list-user/list-user.component';
+import UserService from './service/user.service';
 
 
 
@@ -13,6 +14,6 @@ import { ListUserComponent } from './components/list-user/list-user.component';
   ],
   exports: [
     ListUserComponent
-  ]
+  ],
 })
 export class UsersModule { }

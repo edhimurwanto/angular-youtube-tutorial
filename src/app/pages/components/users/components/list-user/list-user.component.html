@@ -9,11 +9,11 @@
             <td>Avatar</td>
         </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let user of users;">
         <tr>
             <td>01</td>
-            <td>Edi</td>
-            <td>Murwanto</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
             <td>-</td>
             <td>-</td>
         </tr>
