@@ -3,19 +3,17 @@
     <thead>
         <tr>
             <td>ID</td>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Job</td>
-            <td>Avatar</td>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Email</td>
         </tr>
     </thead>
     <tbody *ngFor="let user of users;">
         <tr>
-            <td>01</td>
-            <td>{{user.firstName}}</td>
-            <td>{{user.lastName}}</td>
-            <td>-</td>
-            <td>-</td>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.email}}</td>
         </tr>
     </tbody>
 

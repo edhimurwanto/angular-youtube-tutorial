@@ -14,7 +14,9 @@ export class ListUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getAllUser().then(resp => {
-      this.users = resp
+      resp.toPromise().then((data: any[]) => {
+        this.users = data
+      })
     })
   }
 

@@ -1,3 +1,4 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
 @Injectable({
@@ -5,21 +6,10 @@ import { Injectable } from "@angular/core";
 })
 export default class UserService {
 
+    constructor(private http: HttpClient) { }
+
     async getAllUser() {
-        return [
-            {
-                firstName: 'Edi',
-                lastName: 'Murwanto'
-            },
-            {
-                firstName: 'John',
-                lastName: 'Thor'
-            },
-            {
-                firstName: 'Gabriel',
-                lastName: 'Brown'
-            }
-        ]
+        return this.http.get('https://gorest.co.in/public/v2/users')
     }
 
 }
