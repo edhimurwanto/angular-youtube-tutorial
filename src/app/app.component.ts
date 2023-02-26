@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'my-app';
+  
+  users = [];
 
-  constructor() {
-    console.log("App constructor dipanggil");
-    
-   }
+  constructor(private readonly userService: UserService) {
+
+  }
 
   ngOnInit(): void {
-    console.log("App ngOnInit dipanggil");
+    this.fetchUser()
+  }
+
+  fetchUser() {
+    this.userService.getAll().toPromise().then((resp: any) => {
+
+      this.users = resp.users
+
+    })
   }
 
 }
