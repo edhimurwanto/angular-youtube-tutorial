@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PostsComponent } from './posts/posts.component';
 import { LoginComponent } from './auth/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { LoginComponent } from './auth/login/login.component';
   imports: [
     CommonModule,
     UsersModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   exports: [
     UsersModule,
