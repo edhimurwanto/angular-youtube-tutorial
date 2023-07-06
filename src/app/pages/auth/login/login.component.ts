@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,19 +15,17 @@ export class LoginComponent implements OnInit {
   })
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onLogin() {
     sessionStorage.setItem('credentials', 'username: user')
+    this.router.navigate(['/users']);
   }
 
   onSubmit() {
-    console.log('SUBMIT CLICKED');
-    
-    console.log(this.loginForm.value);
     this.onLogin()
   }
 
