@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.0.0",
+  "homepage": "https://edhimurwanto.github.io/angular-youtube-tutorial/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
